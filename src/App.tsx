@@ -46,7 +46,7 @@ function App() {
         <div>
           <input
             type="text"
-            placeholder="Paste a valid URL"
+            placeholder="Paste a long URL"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
           />
