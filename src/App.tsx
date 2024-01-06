@@ -14,8 +14,12 @@ function App() {
 
   const shortenUrl = async () => {
     setIsShortening(true);
+    setShortr(null);
     try {
-      const request = await shortrInstance.post("/create-link", { url });
+      const request = await shortrInstance("/create-link", {
+        method: "POST",
+        data: { url },
+      });
       const response = request.data;
       return response;
     } catch (error) {
@@ -62,7 +66,7 @@ function App() {
               color="white"
               size={25}
               onClick={() => {
-                copyToClipboard(shortr?.short_key);
+                copyToClipboard(shortr?.short_url);
                 toast.success("Copied!");
               }}
             />

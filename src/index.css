@@ -41,6 +41,11 @@ form > div {
 form > div:not(:first-of-type) {
   align-items: center;
   justify-content: space-between;
+  width: 70%;
+  margin: auto;
+  background-color: #373844;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
 }
 
 form > div:last-of-type > p {
@@ -59,6 +64,7 @@ input {
   padding: 1rem;
   border-radius: 0.5rem;
   border: none;
+  font-family: "Poppins", sans-serif;
 }
 
 input:focus {
@@ -125,5 +131,9 @@ h1 {
 
   form > div:first-of-type > button {
     padding: 1rem;
+  }
+
+  form > div:not(:first-of-type) {
+    width: 90%;
   }
 }
